@@ -1,0 +1,1412 @@
+Windows PowerShell
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+PS C:\Users\王恰> pipenv
+pipenv : 无法将“pipenv”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径
+正确，然后再试一次。
+所在位置 行:1 字符: 1
++ pipenv
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (pipenv:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ERROR: You must give at least one requirement to install (see "pip help install")
+WARNING: You are using pip version 21.1.1; however, version 22.1.2 is available.
+You should consider upgrading via the 'c:\users\王恰\.pyenv\pyenv-win\versions\3.9.5\python.exe -m pip install --upgrade pip' command.
+PS D:\dev\foo> pip exec pip install numpy
+pip : 无法将“pip”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+所在位置 行:1 字符: 1
++ pip exec pip install numpy
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (pip:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\dev\foo> pip exec pip install numpy
+pip : 无法将“pip”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
++ pip exec pip install numpy
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (pip:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\dev\foo> pyenv exec pip install -U pipenv
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/7f/30/685c4e3d7c155d37217a9431eecbf85a20da813e86297afe4c7c95bede0f/pipenv-2022.6.7-py2.py3-none-any.whl (3.9 MB)
+     |████████████████████████████████| 3.9 MB 364 kB/s
+Collecting virtualenv-clone>=0.2.5
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/21/ac/e07058dc5a6c1b97f751d24f20d4b0ec14d735d77f4a1f78c471d6d13a43/virtualenv_clone-0.5.7-py3-none-any.whl (6.6 kB)
+Collecting certifi
+whl (155 kB)
+     |████████████████████████████████| 155 kB 469 kB/s
+ny.whl (8.8 MB)
+     |████████████████████████████████| 8.8 MB 731 kB/s
+Collecting pip>=22.0.4
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/96/2f/caec18213f6a67852f6997fb0673ae08d2e93d1b81573edb93ba4ef06970/pip-22.1.2-py3-none-any.whl (2.1Requirement already satisfied: setuptools>=36.2.1 in c:\users\王恰\.pyenv\pyenv-win\versions\3.9.5\lib\site-packages (from pipenv) (56.0.0)
+Collecting distlib<1,>=0.3.1
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/ac/a3/8ee4f54d5f12e16eeeda6b7df3dfdbda24e6cc572c86ff959a4ce110391b/distlib-0.3.4-py2.py3-none-any.whl (461 kB)
+Collecting filelock<4,>=3.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a6/d5/17f02b379525d1ff9678bfa58eb9548f561c8826deb0b85797aa0eed582d/filelock-3.7.1-py3-none-any.whl (10 kB)
+Requirement already satisfied: six<2,>=1.9.0 in c:\users\王恰\.pyenv\pyenv-win\versions\3.9.5\lib\site-packages (from virtualenv->pipenv) (1.16.0)
+Collecting platformdirs<3,>=2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ed/22/967181c94c3a4063fe64e15331b4cb366bdd7dfbf46fcb8ad89650026fec/platformdirs-2.5.2-py3-none-any.whl (14 kB)
+Installing collected packages: platformdirs, filelock, distlib, virtualenv-clone, virtualenv, pip, certifi, pipenv
+  Attempting uninstall: pip
+    Found existing installation: pip 21.1.1
+    Uninstalling pip-21.1.1:
+      Successfully uninstalled pip-21.1.1
+ERROR: Could not install packages due to an OSError: [WinError 5] 拒绝访问。: 'C:\\Users\\王恰\\AppData\\Local\\Temp\\pip-uninstall-t73b1wop\\pip.exe'
+Consider using the `--user` option or check the permissions.
+
+PS D:\dev\foo> pipenv
+pipenv : 无法将“pipenv”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+所在位置 行:1 字符: 1
++ pipenv
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (pipenv:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\dev\foo> pyenv exec pip install -U numpy
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting numpy
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/99/2e/de8dcdbe1579b96f202685d8811d864291c374ea5fce13c63c70fdaf905d/numpy-1.22.4-cp39-cp39-win_amd64.whl (14.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.7/14.7 MB 804.8 kB/s eta 0:00:00
+Installing collected packages: numpy
+Successfully installed numpy-1.22.4
+PS D:\dev\foo> pyenv versions
+  3.7.4
+* 3.9.5 (set by D:\dev\foo\.python-version)
+PS D:\dev\foo> pyenv local 3.9.5
+PS D:\dev\foo> pyenv versions
+  3.7.4
+* 3.9.5 (set by %PYENV_VERSION%)
+PS D:\dev\foo>
+               ^C
+PS D:\dev\foo> cd ..
+PS D:\dev> wsl
+Welcome to Ubuntu 20.04 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Jun 10 16:55:54 CST 2022
+
+  System load:  0.08               Processes:             8
+  Usage of /:   0.9% of 250.98GB   Users logged in:       0
+  Memory usage: 1%                 IPv4 address for eth0: 172.17.244.125
+  Swap usage:   0%
+
+
+270 updates can be installed immediately.
+131 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+This message is shown once once a day. To disable it please create the
+/root/.hushlogin file.
+root@DESKTOP-44BC9SM:/mnt/d/dev# sudo apt-get install -y make build-essential libssl-dev zlib1g-dev \
+> libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev \
+> libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+curl is already the newest version (7.68.0-1ubuntu2.7).
+The following packages were automatically installed and are no longer required:
+  libc-ares2 libnode64 nodejs-doc
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  binfmt-support binutils binutils-common binutils-x86-64-linux-gnu bzip2-doc cpp cpp-9 dpkg-dev fakeroot g++ g++-9 gcc gcc-10-base gcc-9 gcc-9-base
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libatomic1 libbinutils libc-dev-bin libc6 libc6-dev libcc1-0
+  libclang-cpp10 libcrypt-dev libctf-nobfd0 libctf0 libdpkg-perl libexpat1-dev libfakeroot libfile-fcntllock-perl libfontconfig1-dev libfreetype-dev
+  libfreetype6 libfreetype6-dev libgcc-9-dev libgcc-s1 libgomp1 libice-dev libisl22 libitm1 libllvm10 liblsan0 liblzma5 libmpc3 libncurses-dev libpfm4
+  libpng-dev libpng-tools libpthread-stubs0-dev libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib libquadmath0 libsm-dev libsqlite3-0 libssl1.1
+  libstdc++-9-dev libstdc++6 libtcl8.6 libtk8.6 libtsan0 libubsan1 libuuid1 libx11-6 libx11-dev libxau-dev libxcb1-dev libxdmcp-dev libxext-dev libxft-dev
+  libxrender-dev libxss-dev libxss1 libxt-dev libz3-4 libz3-dev linux-libc-dev llvm-10 llvm-10-dev llvm-10-runtime llvm-10-tools llvm-runtime manpages-dev
+  pkg-config python-cffi-backend python-cryptography python-enum34 python-ipaddress python-six python2 python2-minimal python2.7 python2.7-minimal
+  python3-pygments tcl tcl-dev tcl8.6 tcl8.6-dev tk tk8.6 tk8.6-dev uuid-dev x11proto-core-dev x11proto-dev x11proto-scrnsaver-dev x11proto-xext-dev
+  xbitmaps xorg-sgml-doctools xterm xtrans-dev zlib1g
+Suggested packages:
+  binutils-doc cpp-doc gcc-9-locales debian-keyring g++-multilib g++-9-multilib gcc-9-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc
+  gcc-9-multilib glibc-doc bzr freetype2-doc libice-doc liblzma-doc ncurses-doc readline-doc libsm-doc sqlite3-doc libssl-doc libstdc++-9-doc libx11-doc
+  libxcb-doc libxext-doc libxt-doc llvm-10-doc make-doc python-cryptography-doc python-cryptography-vectors python-enum34-doc python-openssl-doc
+  python-openssl-dbg python2-doc python-tk python2.7-doc python-pygments-doc ttf-bitstream-vera tcl-doc tcl-tclreadline tcl8.6-doc tk-doc tk8.6-doc
+  xfonts-cyrillic
+The following NEW packages will be installed:
+  binfmt-support binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2-doc cpp cpp-9 dpkg-dev fakeroot g++ g++-9 gcc gcc-9 gcc-9-base
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libatomic1 libbinutils libbz2-dev libc-dev-bin libc6-dev libcc1-0
+  libclang-cpp10 libcrypt-dev libctf-nobfd0 libctf0 libdpkg-perl libexpat1-dev libfakeroot libffi-dev libfile-fcntllock-perl libfontconfig1-dev
+  libfreetype-dev libfreetype6-dev libgcc-9-dev libgomp1 libice-dev libisl22 libitm1 libllvm10 liblsan0 liblzma-dev libmpc3 libncurses-dev libncurses5-dev
+  libncursesw5-dev libpfm4 libpng-dev libpng-tools libpthread-stubs0-dev libpython2-stdlib libpython2.7-minimal libpython2.7-stdlib libquadmath0
+  libreadline-dev libsm-dev libsqlite3-dev libssl-dev libstdc++-9-dev libtcl8.6 libtk8.6 libtsan0 libubsan1 libx11-dev libxau-dev libxcb1-dev libxdmcp-dev
+  libxext-dev libxft-dev libxrender-dev libxss-dev libxss1 libxt-dev libz3-4 libz3-dev linux-libc-dev llvm llvm-10 llvm-10-dev llvm-10-runtime
+  llvm-10-tools llvm-runtime make manpages-dev pkg-config python-cffi-backend python-cryptography python-enum34 python-ipaddress python-openssl python-six
+  python2 python2-minimal python2.7 python2.7-minimal python3-pygments tcl tcl-dev tcl8.6 tcl8.6-dev tk tk-dev tk8.6 tk8.6-dev uuid-dev x11proto-core-dev
+  x11proto-dev x11proto-scrnsaver-dev x11proto-xext-dev xbitmaps xorg-sgml-doctools xterm xtrans-dev zlib1g-dev
+The following packages will be upgraded:
+  gcc-10-base libc6 libfreetype6 libgcc-s1 liblzma5 libsqlite3-0 libssl1.1 libstdc++6 libuuid1 libx11-6 wget xz-utils zlib1g
+13 upgraded, 117 newly installed, 0 to remove and 236 not upgraded.
+Need to get 119 MB/130 MB of archives.
+After this operation, 629 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libpython2.7-minimal amd64 2.7.18-1~20.04.1 [335 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 python2.7-minimal amd64 2.7.18-1~20.04.1 [1285 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/universe amd64 python2-minimal amd64 2.7.17-2ubuntu4 [27.5 kB]
+Err:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6 amd64 2.31-0ubuntu9.2
+  404  Not Found [IP: 185.125.190.36 80]
+Err:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2.10
+  404  Not Found [IP: 185.125.190.36 80]
+Ign:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsqlite3-0 amd64 3.31.1-4ubuntu0.2
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libpython2.7-stdlib amd64 2.7.18-1~20.04.1 [1887 kB]
+Err:6 http://security.ubuntu.com/ubuntu focal-updates/main amd64 libsqlite3-0 amd64 3.31.1-4ubuntu0.2
+  404  Not Found [IP: 185.125.190.36 80]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 python2.7 amd64 2.7.18-1~20.04.1 [248 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/universe amd64 libpython2-stdlib amd64 2.7.17-2ubuntu4 [7072 B]
+Get:10 http://archive.ubuntu.com/ubuntu focal/universe amd64 python2 amd64 2.7.17-2ubuntu4 [26.5 kB]
+Err:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 liblzma5 amd64 5.2.4-1ubuntu1
+  404  Not Found [IP: 185.125.190.36 80]
+Err:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libuuid1 amd64 2.34-0.1ubuntu9.1
+  404  Not Found [IP: 185.125.190.36 80]
+Err:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 zlib1g amd64 1:1.2.11.dfsg-2ubuntu1.2
+  404  Not Found [IP: 185.125.190.36 80]
+Err:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 xz-utils amd64 5.2.4-1ubuntu1
+  404  Not Found [IP: 185.125.190.36 80]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libx11-6 amd64 2:1.6.9-2ubuntu1.2 [575 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 wget amd64 1.20.3-1ubuntu2 [348 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal/universe amd64 binfmt-support amd64 2.2.0-2 [58.2 kB]
+Err:18 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.2
+  404  Not Found [IP: 185.125.190.36 80]
+Ign:19 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-96.109
+Err:20 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.2
+  404  Not Found [IP: 185.125.190.36 80]
+Err:19 http://security.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-96.109
+  404  Not Found [IP: 185.125.190.36 80]
+Ign:21 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9-base amd64 9.3.0-17ubuntu1~20.04
+Err:21 http://security.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9-base amd64 9.3.0-17ubuntu1~20.04
+  404  Not Found [IP: 185.125.190.36 80]
+Ign:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cpp-9 amd64 9.3.0-17ubuntu1~20.04
+Err:22 http://security.ubuntu.com/ubuntu focal-updates/main amd64 cpp-9 amd64 9.3.0-17ubuntu1~20.04
+  404  Not Found [IP: 185.125.190.36 80]
+Ign:23 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasan5 amd64 9.3.0-17ubuntu1~20.04
+Err:23 http://security.ubuntu.com/ubuntu focal-updates/main amd64 libasan5 amd64 9.3.0-17ubuntu1~20.04
+  404  Not Found [IP: 185.125.190.36 80]
+Ign:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcc-9-dev amd64 9.3.0-17ubuntu1~20.04
+Err:24 http://security.ubuntu.com/ubuntu focal-updates/main amd64 libgcc-9-dev amd64 9.3.0-17ubuntu1~20.04
+  404  Not Found [IP: 185.125.190.36 80]
+Ign:25 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9 amd64 9.3.0-17ubuntu1~20.04
+Err:25 http://security.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9 amd64 9.3.0-17ubuntu1~20.04
+  404  Not Found [IP: 185.125.190.36 80]
+Ign:26 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libstdc++-9-dev amd64 9.3.0-17ubuntu1~20.04
+Err:26 http://security.ubuntu.com/ubuntu focal-updates/main amd64 libstdc++-9-dev amd64 9.3.0-17ubuntu1~20.04
+  404  Not Found [IP: 185.125.190.36 80]
+Ign:27 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 g++-9 amd64 9.3.0-17ubuntu1~20.04
+Err:27 http://security.ubuntu.com/ubuntu focal-updates/main amd64 g++-9 amd64 9.3.0-17ubuntu1~20.04
+  404  Not Found [IP: 185.125.190.36 80]
+Get:28 http://archive.ubuntu.com/ubuntu focal/main amd64 bzip2-doc all 1.0.8-2 [501 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal/main amd64 libbz2-dev amd64 1.0.8-2 [30.2 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal/main amd64 libllvm10 amd64 1:10.0.0-4ubuntu1 [15.3 MB]
+Get:31 http://archive.ubuntu.com/ubuntu focal/universe amd64 libclang-cpp10 amd64 1:10.0.0-4ubuntu1 [9944 kB]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfreetype6 amd64 2.10.1-2ubuntu0.1 [341 kB]
+Err:33 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu1.2
+  404  Not Found [IP: 185.125.190.36 80]
+Get:34 http://archive.ubuntu.com/ubuntu focal/main amd64 libpng-dev amd64 1.6.37-2 [175 kB]
+Get:35 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfreetype-dev amd64 2.10.1-2ubuntu0.1 [493 kB]
+Get:36 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfreetype6-dev amd64 2.10.1-2ubuntu0.1 [9812 B]
+Err:37 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 uuid-dev amd64 2.34-0.1ubuntu9.1
+  404  Not Found [IP: 185.125.190.36 80]
+Get:38 http://archive.ubuntu.com/ubuntu focal/main amd64 pkg-config amd64 0.29.1-0ubuntu4 [45.5 kB]
+Get:39 http://archive.ubuntu.com/ubuntu focal/main amd64 libfontconfig1-dev amd64 2.13.1-2ubuntu3 [731 kB]
+Get:40 http://archive.ubuntu.com/ubuntu focal/main amd64 xorg-sgml-doctools all 1:1.11-1 [12.9 kB]
+Get:41 http://archive.ubuntu.com/ubuntu focal/main amd64 x11proto-dev all 2019.2-1ubuntu1 [594 kB]
+Get:42 http://archive.ubuntu.com/ubuntu focal/main amd64 x11proto-core-dev all 2019.2-1ubuntu1 [2620 B]
+Get:43 http://archive.ubuntu.com/ubuntu focal/main amd64 libice-dev amd64 2:1.0.10-0ubuntu1 [47.8 kB]
+Get:44 http://archive.ubuntu.com/ubuntu focal/main amd64 libncurses-dev amd64 6.2-0ubuntu2 [339 kB]
+Get:45 http://archive.ubuntu.com/ubuntu focal/main amd64 libncurses5-dev amd64 6.2-0ubuntu2 [976 B]
+Get:46 http://archive.ubuntu.com/ubuntu focal/main amd64 libncursesw5-dev amd64 6.2-0ubuntu2 [980 B]
+Get:47 http://archive.ubuntu.com/ubuntu focal/main amd64 libpng-tools amd64 1.6.37-2 [26.1 kB]
+Get:48 http://archive.ubuntu.com/ubuntu focal/main amd64 libpthread-stubs0-dev amd64 0.4-1 [5384 B]
+Get:49 http://archive.ubuntu.com/ubuntu focal/main amd64 libreadline-dev amd64 8.0-4 [141 kB]
+Get:50 http://archive.ubuntu.com/ubuntu focal/main amd64 libsm-dev amd64 2:1.2.3-1 [17.0 kB]
+Ign:51 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsqlite3-dev amd64 3.31.1-4ubuntu0.2
+Err:52 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl-dev amd64 1.1.1f-1ubuntu2.10
+  404  Not Found [IP: 185.125.190.36 80]
+Err:51 http://security.ubuntu.com/ubuntu focal-updates/main amd64 libsqlite3-dev amd64 3.31.1-4ubuntu0.2
+  404  Not Found [IP: 185.125.190.36 80]
+Get:53 http://archive.ubuntu.com/ubuntu focal/main amd64 libtcl8.6 amd64 8.6.10+dfsg-1 [902 kB]
+Get:54 http://archive.ubuntu.com/ubuntu focal/main amd64 libxss1 amd64 1:1.2.3-1 [8140 B]
+Get:55 http://archive.ubuntu.com/ubuntu focal/main amd64 libtk8.6 amd64 8.6.10-1 [714 kB]
+Get:56 http://archive.ubuntu.com/ubuntu focal/main amd64 libxau-dev amd64 1:1.0.9-0ubuntu1 [9552 B]
+Get:57 http://archive.ubuntu.com/ubuntu focal/main amd64 libxdmcp-dev amd64 1:1.1.3-0ubuntu1 [25.3 kB]
+Get:58 http://archive.ubuntu.com/ubuntu focal/main amd64 xtrans-dev all 1.4.0-1 [68.9 kB]
+Get:59 http://archive.ubuntu.com/ubuntu focal/main amd64 libxcb1-dev amd64 1.14-2 [80.5 kB]
+Get:60 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libx11-dev amd64 2:1.6.9-2ubuntu1.2 [647 kB]
+Get:61 http://archive.ubuntu.com/ubuntu focal/main amd64 x11proto-xext-dev all 2019.2-1ubuntu1 [2616 B]
+Get:62 http://archive.ubuntu.com/ubuntu focal/main amd64 libxext-dev amd64 2:1.3.4-0ubuntu1 [82.2 kB]
+Get:63 http://archive.ubuntu.com/ubuntu focal/main amd64 libxrender-dev amd64 1:0.9.10-1 [24.9 kB]
+Get:64 http://archive.ubuntu.com/ubuntu focal/main amd64 libxft-dev amd64 2.3.3-0ubuntu1 [49.1 kB]
+Get:65 http://archive.ubuntu.com/ubuntu focal/main amd64 x11proto-scrnsaver-dev all 2019.2-1ubuntu1 [2624 B]
+Get:66 http://archive.ubuntu.com/ubuntu focal/main amd64 libxss-dev amd64 1:1.2.3-1 [11.9 kB]
+Get:67 http://archive.ubuntu.com/ubuntu focal/main amd64 libxt-dev amd64 1:1.1.5-1 [395 kB]
+Get:68 http://archive.ubuntu.com/ubuntu focal/universe amd64 llvm-10-runtime amd64 1:10.0.0-4ubuntu1 [180 kB]
+Get:69 http://archive.ubuntu.com/ubuntu focal/universe amd64 llvm-runtime amd64 1:10.0-50~exp1 [2916 B]
+Get:70 http://archive.ubuntu.com/ubuntu focal/main amd64 libpfm4 amd64 4.10.1+git20-g7700f49-2 [266 kB]
+Get:71 http://archive.ubuntu.com/ubuntu focal/universe amd64 llvm-10 amd64 1:10.0.0-4ubuntu1 [5214 kB]
+Get:72 http://archive.ubuntu.com/ubuntu focal/universe amd64 llvm amd64 1:10.0-50~exp1 [3880 B]
+Get:73 http://archive.ubuntu.com/ubuntu focal/main amd64 libffi-dev amd64 3.3-4 [57.0 kB]
+Get:74 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-pygments all 2.3.1+dfsg-1ubuntu2.2 [579 kB]
+Get:75 http://archive.ubuntu.com/ubuntu focal/universe amd64 llvm-10-tools amd64 1:10.0.0-4ubuntu1 [317 kB]
+Get:76 http://archive.ubuntu.com/ubuntu focal/universe amd64 libz3-4 amd64 4.8.7-4build1 [6792 kB]
+Get:77 http://archive.ubuntu.com/ubuntu focal/universe amd64 libz3-dev amd64 4.8.7-4build1 [67.5 kB]
+Get:78 http://archive.ubuntu.com/ubuntu focal/universe amd64 llvm-10-dev amd64 1:10.0.0-4ubuntu1 [26.0 MB]
+Get:79 http://archive.ubuntu.com/ubuntu focal/universe amd64 python-cffi-backend amd64 1.14.0-1build1 [69.6 kB]
+Get:80 http://archive.ubuntu.com/ubuntu focal/universe amd64 python-enum34 all 1.1.6-2ubuntu1 [34.9 kB]
+Get:81 http://archive.ubuntu.com/ubuntu focal/universe amd64 python-ipaddress all 1.0.17-1build1 [18.4 kB]
+Get:82 http://archive.ubuntu.com/ubuntu focal/universe amd64 python-six all 1.14.0-2 [12.0 kB]
+Get:83 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 python-cryptography amd64 2.8-3ubuntu0.1 [254 kB]
+Get:84 http://archive.ubuntu.com/ubuntu focal/universe amd64 python-openssl all 19.0.0-1build1 [43.1 kB]
+Get:85 http://archive.ubuntu.com/ubuntu focal/main amd64 tcl8.6 amd64 8.6.10+dfsg-1 [14.8 kB]
+Get:86 http://archive.ubuntu.com/ubuntu focal/universe amd64 tcl amd64 8.6.9+1 [5112 B]
+Get:87 http://archive.ubuntu.com/ubuntu focal/main amd64 tcl8.6-dev amd64 8.6.10+dfsg-1 [905 kB]
+Get:88 http://archive.ubuntu.com/ubuntu focal/universe amd64 tcl-dev amd64 8.6.9+1 [5760 B]
+Get:89 http://archive.ubuntu.com/ubuntu focal/main amd64 tk8.6 amd64 8.6.10-1 [12.5 kB]
+Get:90 http://archive.ubuntu.com/ubuntu focal/universe amd64 tk amd64 8.6.9+1 [3240 B]
+Get:91 http://archive.ubuntu.com/ubuntu focal/main amd64 tk8.6-dev amd64 8.6.10-1 [711 kB]
+Get:92 http://archive.ubuntu.com/ubuntu focal/universe amd64 tk-dev amd64 8.6.9+1 [3076 B]
+Get:93 http://archive.ubuntu.com/ubuntu focal/main amd64 xbitmaps all 1.1.1-2 [28.1 kB]
+Get:94 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 xterm amd64 353-1ubuntu1.20.04.2 [765 kB]
+Err:95 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 liblzma-dev amd64 5.2.4-1ubuntu1
+  404  Not Found [IP: 185.125.190.36 80]
+Fetched 79.0 MB in 2min 40s (492 kB/s)
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc6_2.31-0ubuntu9.2_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.10_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/s/sqlite3/libsqlite3-0_3.31.1-4ubuntu0.2_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/liblzma5_5.2.4-1ubuntu1_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/li
+buuid1_2.34-0.1ubuntu9.1_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib1g_1.2.11.dfsg-2ubuntu1.2_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc-dev-bin_2.31-0ubuntu9.2_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+libc-dev_5.4.0-96.109_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc6-dev_2.31-0ubuntu9.2_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9-base_9.3.0-17ubuntu1~20.04_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-9/cpp-9_9.3.0-17ubuntu1~20.04_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-9/libasan5_9.3.0-17ubuntu1~20.04_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-9/libgcc-9-dev_9.3.0-17ubuntu1~20.04_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.3.0-17ubuntu1~20.04_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-9/libstdc++-9-dev_9.3.0-17ubuntu1~20.04_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-9/g++-9_9.3.0-17ubuntu1~20.04_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib1g-dev_1.2.11.dfsg-2ubuntu1.2_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/uuid-dev_2.34-0.1ubuntu9.1_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/s/sqlite3/libsqlite3-dev_3.31.1-4ubuntu0.2_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl-dev_1.1.1f-1ubuntu2.10_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/liblzma-dev_5.2.4-1ubuntu1_amd64.deb  404  Not Found [IP: 185.125.190.36 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+root@DESKTOP-44BC9SM:/mnt/d/dev# sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llroot@DESKTOP-44BC9SM:/mnt/d/dev# cd ..
+root@DESKTOP-44BC9SM:/mnt/d# cd ..
+root@DESKTOP-44BC9SM:/mnt# cd /etc/apt/
+root@DESKTOP-44BC9SM:/etc/apt# vim sources.list
+root@DESKTOP-44BC9SM:/etc/apt# ls
+apt.conf.d   preferences.d  sources.list.d
+auth.conf.d  sources.list   trusted.gpg.d
+root@DESKTOP-44BC9SM:/etc/apt# cp sources.list
+cp: missing destination file operand after 'sources.list'
+Try 'cp --help' for more information.
+root@DESKTOP-44BC9SM:/etc/apt# cp sources.list sources.list.bak
+root@DESKTOP-44BC9SM:/etc/apt# vim sources.list
+root@DESKTOP-44BC9SM:/etc/apt# apt update
+Ign:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal InRelease
+Ign:2 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates InRelease
+Ign:3 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports InRelease
+Ign:4 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security InRelease
+Err:5 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal Release
+  Certificate verification failed: The certificate is NOT trusted. The certificate chain uses expired certificate.  Could not handshake: Error in the certificate verification. [IP: 101.6.15.130 443]
+Err:6 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates Release
+  Certificate verification failed: The certificate is NOT trusted. The certificate chain uses expired certificate.  Could not handshake: Error in the certificate verification. [IP: 101.6.15.130 443]
+Err:7 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports Release
+  Certificate verification failed: The certificate is NOT trusted. The certificate chain uses expired certificate.  Could not handshake: Error in the certificate verification. [IP: 101.6.15.130 443]
+Err:8 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security Release
+  Certificate verification failed: The certificate is NOT trusted. The certificate chain uses expired certificate.  Could not handshake: Error in the certificate verification. [IP: 101.6.15.130 443]
+Reading package lists... Done
+E: The repository 'https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+E: The repository 'https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+E: The repository 'https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+E: The repository 'https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+root@DESKTOP-44BC9SM:/etc/apt# ls
+apt.conf.d   preferences.d  sources.list.bak  trusted.gpg.d
+auth.conf.d  sources.list   sources.list.d
+root@DESKTOP-44BC9SM:/etc/apt# cp sources.list sources.list.tuna
+root@DESKTOP-44BC9SM:/etc/apt# ls
+apt.conf.d   preferences.d  sources.list.bak  sources.list.tuna
+auth.conf.d  sources.list   sources.list.d    trusted.gpg.d
+root@DESKTOP-44BC9SM:/etc/apt# cp sources.list.bak sources.list
+root@DESKTOP-44BC9SM:/etc/apt# ls
+apt.conf.d   preferences.d  sources.list.bak  sources.list.tuna
+auth.conf.d  sources.list   sources.list.d    trusted.gpg.d
+root@DESKTOP-44BC9SM:/etc/apt# apt update
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1541 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1888 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [263 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [10.6 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [996 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [345 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [15.6 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1064 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [141 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [524 B]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [707 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [151 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [524 B]
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [928 kB]
+Get:19 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [127 kB]
+Get:20 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [14.5 kB]
+Get:21 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.2 kB]
+Get:22 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5376 B]
+Get:23 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [512 B]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-enGet:33 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en[15.9 kB]
+Get:34 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [860 B]
+Fetched 8914 kB in 6s (1547 kB/s)
+
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+279 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@DESKTOP-44BC9SM:/etc/apt#
+root@DESKTOP-44BC9SM:/etc/apt# sudo apt install ca-certificates
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libc-ares2 libnode64 nodejs-doc
+Use 'sudo apt autoremove' to remove them.
+The following packages will be upgraded:
+  ca-certificates
+1 upgraded, 0 newly installed, 0 to remove and 278 not upgraded.
+Need to get 144 kB of archives.
+After this operation, 9216 B disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates all 20211016~20.04.1 [144 kB]
+Fetched 144 kB in 2s (90.1 kB/s)
+Preconfiguring packages ...
+(Reading database ... 32512 files and directories currently installed.)
+Preparing to unpack .../ca-certificates_20211016~20.04.1_all.deb ...
+Unpacking ca-certificates (20211016~20.04.1) over (20190110ubuntu1) ...
+Setting up ca-certificates (20211016~20.04.1) ...
+Updating certificates in /etc/ssl/certs...
+rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+28 added, 29 removed; done.
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for ca-certificates (20211016~20.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+
+done.
+done.
+root@DESKTOP-44BC9SM:/etc/apt# cp sources.list.tuna sources.list
+root@DESKTOP-44BC9SM:/etc/apt# apt update
+Get:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal InRelease [265 kB]
+Get:2 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates InRelease [114 kB]
+Get:3 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports InRelease [108 kB]
+Get:4 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security InRelease [114 kB]
+Get:5 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/main amd64 Packages [970 kB]
+Get:6 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/main Translation-en [506 kB]
+Get:7 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/main amd64 c-n-f Metadata [29.5 kB]
+Get:8 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/restricted amd64 Packages [22.0 kB]
+Get:9 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/restricted Translation-en [6212 B]
+Get:10 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/restricted amd64 c-n-f Metadata [392 B]
+Get:11 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:12 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/universe Translation-en [5124 kB]
+Get:13 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:14 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:15 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/multiverse Translation-en [104 kB]
+Get:16 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:17 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 Packages [1885 kB]
+Get:18 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main Translation-en [344 kB]
+Get:19 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 c-n-f Metadata [15.6 kB]
+Get:20 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/restricted amd64 Packages [1058 kB]
+Get:21 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/restricted Translation-en [150 kB]
+Get:22 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/restricted amd64 c-n-f Metadata [524 B]
+Get:23 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/universe amd64 Packages [928 kB]
+Get:24 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/universe Translation-en [208 kB]
+Get:25 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/universe amd64 c-n-f Metadata [20.8 kB]
+Get:26 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/multiverse amd64 Packages [24.4 kB]
+Get:27 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/multiverse Translation-en [7336 B]
+Get:28 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [596 B]
+Get:29 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports/main amd64 Packages [44.5 kB]
+Get:30 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports/main Translation-en [10.9 kB]
+Get:31 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports/main amd64 c-n-f Metadata [980 B]
+Get:32 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:33 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports/universe amd64 Packages [23.7 kB]
+Get:34 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports/universe Translation-en [15.9 kB]
+Get:35 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports/universe amd64 c-n-f Metadata [860 B]
+Get:36 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:37 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/main amd64 Packages [1532 kB]
+Get:38 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/main Translation-en [262 kB]
+Get:39 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/main amd64 c-n-f Metadata [10.6 kB]
+Get:40 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/restricted amd64 Packages [982 kB]
+Get:41 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/restricted Translation-en [140 kB]
+Get:42 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/restricted amd64 c-n-f Metadata [524 B]
+Get:43 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/universe amd64 Packages [707 kB]
+Get:44 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/universe Translation-en [127 kB]
+Get:45 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/universe amd64 c-n-f Metadata [14.5 kB]
+Get:46 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/multiverse amd64 Packages [22.2 kB]
+Get:47 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/multiverse Translation-en [5376 B]
+Get:48 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-security/multiverse amd64 c-n-f Metadata [512 B]
+Fetched 25.0 MB in 18s (1381 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+278 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@DESKTOP-44BC9SM:/etc/apt# cd ..
+root@DESKTOP-44BC9SM:/etc# cd ..
+root@DESKTOP-44BC9SM:/# cd D:/
+-bash: cd: D:/: No such file or directory
+root@DESKTOP-44BC9SM:/# cd /mnt/d/dev
+root@DESKTOP-44BC9SM:/mnt/d/dev# cd foo
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# python3
+Python 3.8.2 (default, Mar 13 2020, 10:14:16)
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>>
+[1]+  Stopped                 python3
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# ^C
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# sudo apt-get -y install pipenv
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libc-ares2 libnode64 nodejs-doc
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential cpp
+  cpp-9 dpkg-dev fakeroot g++ g++-9 gcc gcc-10-base gcc-9 gcc-9-base
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libasan5 libatomic1 libbinutils libc-dev-bin libc6 libc6-dev libcc1-0
+  libcrypt-dev libctf-nobfd0 libctf0 libdpkg-perl libexpat1 libexpat1-dev
+  libfakeroot libfile-fcntllock-perl libgcc-9-dev libgcc-s1 libgomp1
+  libisl22 libitm1 liblsan0 libmpc3 libpython3-dev libpython3.8
+  libpython3.8-dev libpython3.8-minimal libpython3.8-stdlib libquadmath0
+  libstdc++-9-dev libstdc++6 libtsan0 libubsan1 linux-libc-dev make
+  manpages-dev python-pip-whl python3-appdirs python3-dev python3-distlib
+  python3-filelock python3-pip python3-virtualenv python3-virtualenv-clone
+  python3-wheel python3.8 python3.8-dev python3.8-minimal zlib1g zlib1g-dev
+Suggested packages:
+  binutils-doc cpp-doc gcc-9-locales debian-keyring g++-multilib
+  g++-9-multilib gcc-9-doc gcc-multilib autoconf automake libtool flex
+  bison gdb gcc-doc gcc-9-multilib glibc-doc bzr libstdc++-9-doc make-doc
+  python3.8-venv python3.8-doc binfmt-support
+The following NEW packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential cpp
+  cpp-9 dpkg-dev fakeroot g++ g++-9 gcc gcc-9 gcc-9-base
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libasan5 libatomic1 libbinutils libc-dev-bin libc6-dev libcc1-0
+  libcrypt-dev libctf-nobfd0 libctf0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-9-dev libgomp1 libisl22 libitm1 liblsan0
+  libmpc3 libpython3-dev libpython3.8-dev libquadmath0 libstdc++-9-dev
+  libtsan0 libubsan1 linux-libc-dev make manpages-dev pipenv python-pip-whl
+  python3-appdirs python3-dev python3-distlib python3-filelock python3-pip
+  python3-virtualenv python3-virtualenv-clone python3-wheel python3.8-dev
+  zlib1g-dev
+The following packages will be upgraded:
+  gcc-10-base libc6 libexpat1 libgcc-s1 libpython3.8 libpython3.8-minimal
+  libpython3.8-stdlib libstdc++6 python3.8 python3.8-minimal zlib1g
+11 upgraded, 56 newly installed, 0 to remove and 267 not upgraded.
+Need to get 49.6 MB/65.4 MB of archives.
+After this operation, 242 MB of additional disk space will be used.
+Get:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libc6 amd64 2.31-0ubuntu9.9 [2722 kB]
+Get:2 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 python3.8 amd64 3.8.10-0ubuntu1~20.04.4 [387 kB]
+Get:3 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libpython3.8 amd64 3.8.10-0ubuntu1~20.04.4 [1625 kB]
+Get:4 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.4 [1675 kB]
+Get:5 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 python3.8-minimal amd64 3.8.10-0ubuntu1~20.04.4 [1899 kB]
+Get:6 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.4 [717 kB]
+Get:7 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libexpat1 amd64 2.2.9-1ubuntu0.4 [74.4 kB]
+Get:8 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 zlib1g amd64 1:1.2.11.dfsg-2ubuntu1.3 [53.8 kB]
+Get:9 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.9 [71.8 kB]
+Get:10 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-117.132 [1113 kB]
+Get:11 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.9 [2519 kB]
+Get:12 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 gcc-9-base amd64 9.4.0-1ubuntu1~20.04.1 [19.4 kB]
+Get:13 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 cpp-9 amd64 9.4.0-1ubuntu1~20.04.1 [7500 kB]
+Get:14 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libasan5 amd64 9.4.0-1ubuntu1~20.04.1 [2751 kB]
+Get:15 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libgcc-9-dev amd64 9.4.0-1ubuntu1~20.04.1 [2359 kB]
+Get:16 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 gcc-9 amd64 9.4.0-1ubuntu1~20.04.1 [8274 kB]
+Get:17 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libstdc++-9-dev amd64 9.4.0-1ubuntu1~20.04.1 [1722 kB]
+Get:18 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 g++-9 amd64 9.4.0-1ubuntu1~20.04.1 [8420 kB]
+Get:19 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libdpkg-perl all 1.19.7ubuntu3.2 [231 kB]
+Get:20 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 dpkg-dev all 1.19.7ubuntu3.2 [679 kB]
+Get:21 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libexpat1-dev amd64 2.2.9-1ubuntu0.4 [117 kB]
+Get:22 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 libpython3.8-dev amd64 3.8.10-0ubuntu1~20.04.4 [3952 kB]
+Get:23 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu1.3 [155 kB]
+Get:24 https://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates/main amd64 python3.8-dev amd64 3.8.10-0ubuntu1~20.04.4 [514 kB]
+Fetched 49.6 MB in 17s (2860 kB/s)
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+(Reading database ... 32511 files and directories currently installed.)
+Preparing to unpack .../gcc-10-base_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking gcc-10-base:amd64 (10.3.0-1ubuntu1~20.04) over (10-20200411-0ubuntu1) ...
+Setting up gcc-10-base:amd64 (10.3.0-1ubuntu1~20.04) ...
+(Reading database ... 32511 files and directories currently installed.)
+Preparing to unpack .../libgcc-s1_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libgcc-s1:amd64 (10.3.0-1ubuntu1~20.04) over (10-20200411-0ubuntu1) ...
+Setting up libgcc-s1:amd64 (10.3.0-1ubuntu1~20.04) ...
+(Reading database ... 32511 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libstdc++6:amd64 (10.3.0-1ubuntu1~20.04) over (10-20200411-0ubuntu1) ...
+Setting up libstdc++6:amd64 (10.3.0-1ubuntu1~20.04) ...
+(Reading database ... 32511 files and directories currently installed.)
+Preparing to unpack .../libc6_2.31-0ubuntu9.9_amd64.deb ...
+Unpacking libc6:amd64 (2.31-0ubuntu9.9) over (2.31-0ubuntu9) ...
+Setting up libc6:amd64 (2.31-0ubuntu9.9) ...
+(Reading database ... 32511 files and directories currently installed.)
+Preparing to unpack .../0-python3.8_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking python3.8 (3.8.10-0ubuntu1~20.04.4) over (3.8.2-1ubuntu1) ...
+Preparing to unpack .../1-libpython3.8_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.4) over (3.8.2-1ubuntu1) ...
+Preparing to unpack .../2-libpython3.8-stdlib_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.4) over (3.8.2-1ubuntu1) ...
+Preparing to unpack .../3-python3.8-minimal_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking python3.8-minimal (3.8.10-0ubuntu1~20.04.4) over (3.8.2-1ubuntu1) ...
+Preparing to unpack .../4-libpython3.8-minimal_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.4) over (3.8.2-1ubuntu1) ...
+Preparing to unpack .../5-libexpat1_2.2.9-1ubuntu0.4_amd64.deb ...
+Unpacking libexpat1:amd64 (2.2.9-1ubuntu0.4) over (2.2.9-1build1) ...
+Preparing to unpack .../6-zlib1g_1%3a1.2.11.dfsg-2ubuntu1.3_amd64.deb ...
+Unpacking zlib1g:amd64 (1:1.2.11.dfsg-2ubuntu1.3) over (1:1.2.11.dfsg-2ubuntu1) ...
+Setting up zlib1g:amd64 (1:1.2.11.dfsg-2ubuntu1.3) ...
+Selecting previously unselected package binutils-common:amd64.
+(Reading database ... 32511 files and directories currently installed.)
+Preparing to unpack .../00-binutils-common_2.34-6ubuntu1.3_amd64.deb ...
+Unpacking binutils-common:amd64 (2.34-6ubuntu1.3) ...
+Selecting previously unselected package libbinutils:amd64.
+Preparing to unpack .../01-libbinutils_2.34-6ubuntu1.3_amd64.deb ...
+Unpacking libbinutils:amd64 (2.34-6ubuntu1.3) ...
+Selecting previously unselected package libctf-nobfd0:amd64.
+Preparing to unpack .../02-libctf-nobfd0_2.34-6ubuntu1.3_amd64.deb ...
+Unpacking libctf-nobfd0:amd64 (2.34-6ubuntu1.3) ...
+Selecting previously unselected package libctf0:amd64.
+Preparing to unpack .../03-libctf0_2.34-6ubuntu1.3_amd64.deb ...
+Unpacking libctf0:amd64 (2.34-6ubuntu1.3) ...
+Selecting previously unselected package binutils-x86-64-linux-gnu.
+Preparing to unpack .../04-binutils-x86-64-linux-gnu_2.34-6ubuntu1.3_amd64.deb ...
+Unpacking binutils-x86-64-linux-gnu (2.34-6ubuntu1.3) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../05-binutils_2.34-6ubuntu1.3_amd64.deb ...
+Unpacking binutils (2.34-6ubuntu1.3) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../06-libc-dev-bin_2.31-0ubuntu9.9_amd64.deb ...
+Unpacking libc-dev-bin (2.31-0ubuntu9.9) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../07-linux-libc-dev_5.4.0-117.132_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.4.0-117.132) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../08-libcrypt-dev_1%3a4.4.10-10ubuntu4_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../09-libc6-dev_2.31-0ubuntu9.9_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.31-0ubuntu9.9) ...
+Selecting previously unselected package gcc-9-base:amd64.
+Preparing to unpack .../10-gcc-9-base_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking gcc-9-base:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package libisl22:amd64.
+Preparing to unpack .../11-libisl22_0.22.1-1_amd64.deb ...
+Unpacking libisl22:amd64 (0.22.1-1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../12-libmpc3_1.1.0-1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.1.0-1) ...
+Selecting previously unselected package cpp-9.
+Preparing to unpack .../13-cpp-9_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking cpp-9 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../14-cpp_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking cpp (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../15-libcc1-0_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libcc1-0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../16-libgomp1_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libgomp1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../17-libitm1_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libitm1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../18-libatomic1_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libatomic1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libasan5:amd64.
+Preparing to unpack .../19-libasan5_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking libasan5:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../20-liblsan0_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking liblsan0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../21-libtsan0_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libtsan0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../22-libubsan1_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libubsan1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../23-libquadmath0_10.3.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libquadmath0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libgcc-9-dev:amd64.
+Preparing to unpack .../24-libgcc-9-dev_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking libgcc-9-dev:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package gcc-9.
+Preparing to unpack .../25-gcc-9_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking gcc-9 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../26-gcc_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking gcc (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package libstdc++-9-dev:amd64.
+Preparing to unpack .../27-libstdc++-9-dev_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking libstdc++-9-dev:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package g++-9.
+Preparing to unpack .../28-g++-9_9.4.0-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking g++-9 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../29-g++_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking g++ (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package make.
+Preparing to unpack .../30-make_4.2.1-1.2_amd64.deb ...
+Unpacking make (4.2.1-1.2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../31-libdpkg-perl_1.19.7ubuntu3.2_all.deb ...
+Unpacking libdpkg-perl (1.19.7ubuntu3.2) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../32-dpkg-dev_1.19.7ubuntu3.2_all.deb ...
+Unpacking dpkg-dev (1.19.7ubuntu3.2) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../33-build-essential_12.8ubuntu1.1_amd64.deb ...
+Unpacking build-essential (12.8ubuntu1.1) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../34-libfakeroot_1.24-1_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.24-1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../35-fakeroot_1.24-1_amd64.deb ...
+Unpacking fakeroot (1.24-1) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../36-libalgorithm-diff-perl_1.19.03-2_all.deb ...
+Unpacking libalgorithm-diff-perl (1.19.03-2) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../37-libalgorithm-diff-xs-perl_0.04-6_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-6) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../38-libalgorithm-merge-perl_0.08-3_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-3) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../39-libexpat1-dev_2.2.9-1ubuntu0.4_amd64.deb ...
+Unpacking libexpat1-dev:amd64 (2.2.9-1ubuntu0.4) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../40-libfile-fcntllock-perl_0.22-3build4_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-3build4) ...
+Selecting previously unselected package libpython3.8-dev:amd64.
+Preparing to unpack .../41-libpython3.8-dev_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking libpython3.8-dev:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Selecting previously unselected package libpython3-dev:amd64.
+Preparing to unpack .../42-libpython3-dev_3.8.2-0ubuntu2_amd64.deb ...
+Unpacking libpython3-dev:amd64 (3.8.2-0ubuntu2) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../43-manpages-dev_5.05-1_all.deb ...
+Unpacking manpages-dev (5.05-1) ...
+Selecting previously unselected package python3-wheel.
+Preparing to unpack .../44-python3-wheel_0.34.2-1_all.deb ...
+Unpacking python3-wheel (0.34.2-1) ...
+Selecting previously unselected package python-pip-whl.
+Preparing to unpack .../45-python-pip-whl_20.0.2-5ubuntu1.6_all.deb ...
+Unpacking python-pip-whl (20.0.2-5ubuntu1.6) ...
+Selecting previously unselected package python3-pip.
+Preparing to unpack .../46-python3-pip_20.0.2-5ubuntu1.6_all.deb ...
+Unpacking python3-pip (20.0.2-5ubuntu1.6) ...
+Selecting previously unselected package python3-appdirs.
+Preparing to unpack .../47-python3-appdirs_1.4.3-2.1_all.deb ...
+Unpacking python3-appdirs (1.4.3-2.1) ...
+Selecting previously unselected package python3-distlib.
+Preparing to unpack .../48-python3-distlib_0.3.0-1_all.deb ...
+Unpacking python3-distlib (0.3.0-1) ...
+Selecting previously unselected package python3-filelock.
+Preparing to unpack .../49-python3-filelock_3.0.12-2_all.deb ...
+Unpacking python3-filelock (3.0.12-2) ...
+Selecting previously unselected package python3-virtualenv.
+Preparing to unpack .../50-python3-virtualenv_20.0.17-1ubuntu0.4_all.deb ...
+Unpacking python3-virtualenv (20.0.17-1ubuntu0.4) ...
+Selecting previously unselected package python3-virtualenv-clone.
+Preparing to unpack .../51-python3-virtualenv-clone_0.3.0-2_all.deb ...
+Unpacking python3-virtualenv-clone (0.3.0-2) ...
+Selecting previously unselected package pipenv.
+Preparing to unpack .../52-pipenv_11.9.0-1_all.deb ...
+Unpacking pipenv (11.9.0-1) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../53-zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu1.3_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.3) ...
+Selecting previously unselected package python3.8-dev.
+Preparing to unpack .../54-python3.8-dev_3.8.10-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking python3.8-dev (3.8.10-0ubuntu1~20.04.4) ...
+Selecting previously unselected package python3-dev.
+Preparing to unpack .../55-python3-dev_3.8.2-0ubuntu2_amd64.deb ...
+Unpacking python3-dev (3.8.2-0ubuntu2) ...
+Setting up libexpat1:amd64 (2.2.9-1ubuntu0.4) ...
+Setting up manpages-dev (5.05-1) ...
+Setting up python3-filelock (3.0.12-2) ...
+Setting up libpython3.8-minimal:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Setting up libfile-fcntllock-perl (0.22-3build4) ...
+Setting up libalgorithm-diff-perl (1.19.03-2) ...
+Setting up binutils-common:amd64 (2.34-6ubuntu1.3) ...
+Setting up linux-libc-dev:amd64 (5.4.0-117.132) ...
+Setting up libctf-nobfd0:amd64 (2.34-6ubuntu1.3) ...
+Setting up python3-virtualenv-clone (0.3.0-2) ...
+Setting up python3-distlib (0.3.0-1) ...
+Setting up libgomp1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up python3-wheel (0.34.2-1) ...
+Setting up libfakeroot:amd64 (1.24-1) ...
+Setting up fakeroot (1.24-1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+Setting up make (4.2.1-1.2) ...
+Setting up libquadmath0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up libmpc3:amd64 (1.1.0-1) ...
+Setting up libatomic1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up libdpkg-perl (1.19.7ubuntu3.2) ...
+Setting up libubsan1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up python3.8-minimal (3.8.10-0ubuntu1~20.04.4) ...
+Setting up libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
+Setting up libisl22:amd64 (0.22.1-1) ...
+Setting up python-pip-whl (20.0.2-5ubuntu1.6) ...
+Setting up libbinutils:amd64 (2.34-6ubuntu1.3) ...
+Setting up libpython3.8-stdlib:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Setting up libc-dev-bin (2.31-0ubuntu9.9) ...
+Setting up python3.8 (3.8.10-0ubuntu1~20.04.4) ...
+Setting up python3-appdirs (1.4.3-2.1) ...
+Setting up libalgorithm-diff-xs-perl (0.04-6) ...
+Setting up libcc1-0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up liblsan0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up libitm1:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up gcc-9-base:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up libalgorithm-merge-perl (0.08-3) ...
+Setting up libtsan0:amd64 (10.3.0-1ubuntu1~20.04) ...
+Setting up libctf0:amd64 (2.34-6ubuntu1.3) ...
+Setting up python3-virtualenv (20.0.17-1ubuntu0.4) ...
+Setting up libasan5:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up libpython3.8:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Setting up python3-pip (20.0.2-5ubuntu1.6) ...
+Setting up cpp-9 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up libc6-dev:amd64 (2.31-0ubuntu9.9) ...
+Setting up binutils-x86-64-linux-gnu (2.34-6ubuntu1.3) ...
+Setting up pipenv (11.9.0-1) ...
+Setting up binutils (2.34-6ubuntu1.3) ...
+Setting up dpkg-dev (1.19.7ubuntu3.2) ...
+Setting up libgcc-9-dev:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up libexpat1-dev:amd64 (2.2.9-1ubuntu0.4) ...
+Setting up libpython3.8-dev:amd64 (3.8.10-0ubuntu1~20.04.4) ...
+Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.3) ...
+Setting up cpp (4:9.3.0-1ubuntu2) ...
+Setting up gcc-9 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up libpython3-dev:amd64 (3.8.2-0ubuntu2) ...
+Setting up libstdc++-9-dev:amd64 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up gcc (4:9.3.0-1ubuntu2) ...
+Setting up g++-9 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up python3.8-dev (3.8.10-0ubuntu1~20.04.4) ...
+Setting up g++ (4:9.3.0-1ubuntu2) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up build-essential (12.8ubuntu1.1) ...
+Setting up python3-dev (3.8.2-0ubuntu2) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install numpy
+Creating a virtualenv for this project…
+Using /usr/bin/python3 (3.8.10) to create virtualenv…
+⠋created virtual environment CPython3.8.10.final.0-64 in 677ms
+  creator CPython3Posix(dest=/root/.local/share/virtualenvs/foo-QuVju7sM, clear=False, global=False)
+  seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, pkg_resources=latest, via=copy, app_data_dir=/root/.local/share/virtualenv/seed-app-data/v1.0.1.debian.1)
+  activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
+
+Virtualenv location: /root/.local/share/virtualenvs/foo-QuVju7sM
+Creating a Pipfile for this project…
+Installing numpy…
+Looking in indexes: https://pypi.python.org/simple
+Collecting numpy
+  Downloading numpy-1.22.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.9 MB)
+Installing collected packages: numpy
+Successfully installed numpy-1.22.4
+
+Adding numpy to Pipfile's [packages]…
+Pipfile.lock not found, creating…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+1]
+  File "/usr/lib/python3/dist-packages/pipenv/patched/piptools/resolver.py", line 72, in resolve_hashes
+    return {ireq: self.repository.get_hashes(ireq) for ireq in ireqs}
+  File "/usr/lib/python3/dist-packages/pipenv/patched/piptools/resolver.py", line 72, in <dictcomp>
+    return {ireq: self.repository.get_hashes(ireq) for ireq in ireqs}
+  File "/usr/lib/python3/dist-packages/pipenv/patched/piptools/repositories/pypi.py", line 274, in get_hashes
+    return {
+  File "/usr/lib/python3/dist-packages/pipenv/patched/piptools/repositories/pypi.py", line 275, in <setcomp>
+    self._get_file_hash(candidate.location)
+  File "/usr/lib/python3/dist-packages/pipenv/patched/piptools/repositories/pypi.py", line 282, in _get_file_hash
+    for chunk in iter(lambda: fp.read(8096), b""):
+  File "/usr/lib/python3/dist-packages/pipenv/patched/piptools/repositories/pypi.py", line 282, in <lambda>
+    for chunk in iter(lambda: fp.read(8096), b""):
+  File "/usr/lib/python3/dist-packages/pipenv/vendor/pip9/_vendor/requests/packages/urllib3/response.py", line 324, in read
+    flush_decoder = True
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/lib/python3/dist-packages/pipenv/vendor/pip9/_vendor/requests/packages/urllib3/response.py", line 237, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, 'Read timed out.')
+pip9._vendor.requests.packages.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Read timed out.
+
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+Writing to /root/.config/pip/pip.conf
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install numpy
+Installing numpy…
+Looking in indexes: https://pypi.python.org/simple
+Requirement already satisfied: numpy in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (1.22.4)
+
+Adding numpy to Pipfile's [packages]…
+Pipfile.lock not found, creating…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+es = retries.increment(method, url, error=e, _pool=self,
+  File "/usr/lib/python3/dist-packages/pipenv/vendor/requests/packages/urllib3/util/retry.py", line 287, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/numpy/json (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f3c81d85250>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pipenv/resolver.py", line 82, in <module>
+    main()
+  File "/usr/lib/python3/dist-packages/pipenv/resolver.py", line 66, in main
+    results = resolve(
+  File "/usr/lib/python3/dist-packages/pipenv/resolver.py", line 56, in resolve
+    return pipenv.utils.resolve_deps(
+  File "/usr/lib/python3/dist-packages/pipenv/utils.py", line 469, in resolve_deps
+    r = requests.get(
+  File "/usr/lib/python3/dist-packages/pipenv/vendor/requests/sessions.py", line 488, in get
+    return self.request('GET', url, **kwargs)
+  File "/usr/lib/python3/dist-packages/pipenv/vendor/requests/sessions.py", line 475, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/pipenv/vendor/requests/sessions.py", line 596, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/pipenv/vendor/requests/adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/numpy/json (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f3c81d85250>: Failed to establish a new connection: [Errno 101] Network isunreachable'))
+
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install --pypi-mirror  https://pypi.tuna.tsinghua.edu.cn/simple
+Installing --pypi-mirror…
+⠋WARNING: Invalid requirement, parse error at "'--pypi-m'"
+ABORTING INSTALL... You will have to reinstall any packages that failed to install.
+You may have to manually run pipenv lock when you are finished.
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install numpy  https://pypi.tuna.tsinghua.edu.cn/simple
+Installing numpy…
+Looking in indexes: https://pypi.python.org/simple
+Requirement already satisfied: numpy in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (1.22.4)
+
+Adding numpy to Pipfile's [packages]…
+Installing https://pypi.tuna.tsinghua.edu.cn/simple…
+⠸^Z
+[2]+  Stopped                 pipenv install numpy https://pypi.tuna.tsinghua.edu.cn/simple
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install —pypi-mirror https://pypi.tuna.tsinghua.edu.cn/simple numpy
+Installing —pypi-mirror…
+⠋WARNING: Invalid requirement, parse error at "'—pypi-mi'"
+ABORTING INSTALL... You will have to reinstall any packages that failed to install.
+You may have to manually run pipenv lock when you are finished.
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install -—pypi-mirror https://pypi.tuna.tsinghua.edu.cn/simple numpy
+Requirements file provided! Importing into Pipfile…
+Requirements file doesn't appear to exist. Please ensure the file exists in your project directory or you provided the correct path.
+
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# ls
+Pipfile  demo.ipynb
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# rm Pipfile
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# ls
+demo.ipynb
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install -—pypi-mirror https://pypi.tuna.tsinghua.edu.cn/simple numpy
+Creating a Pipfile for this project…
+Requirements file provided! Importing into Pipfile…
+Requirements file doesn't appear to exist. Please ensure the file exists in your project directory or you provided the correct path.
+
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install
+Pipfile.lock not found, creating…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+Updated Pipfile.lock (9e16cc)!
+Installing dependencies from Pipfile.lock (9e16cc)…
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 0/0 — 00:00:00
+To activate this project's virtualenv, run the following:
+ $ pipenv shell
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv shell
+Spawning environment shell (/bin/bash). Use 'exit' to leave.
+. /root/.local/share/virtualenvs/foo-QuVju7sM/bin/activate
+
+
+root@DESKTOP-44BC9SM:/mnt/d/dev/foo# . /root/.local/share/virtualenvs/foo-QuVju7sM/bin/activate
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# ls
+Pipfile  Pipfile.lock  demo.ipynb
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install -—pypi-mirror https://pypi.tuna.tsinghua.edu.cn/simple numpy
+Requirements file provided! Importing into Pipfile…
+Requirements file doesn't appear to exist. Please ensure the file exists in your project directory or you provided the correct path.
+
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install -—pypi-mirror https://pypi.tuna.tsinghua.edu.cn/simple numpy
+Requirements file provided! Importing into Pipfile…
+Requirements file doesn't appear to exist. Please ensure the file exists in your project directory or you provided the correct path.
+
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install numpy --skip-lock
+Installing numpy…
+Looking in indexes: https://pypi.python.org/simple
+Requirement already satisfied: numpy in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (1.22.4)
+
+Adding numpy to Pipfile's [packages]…
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv lock --pypi-mirror https://pypi.tuna.tsinghua.edu.cn/simple
+Error: no such option: --pypi-mirror
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv lock --help
+Usage: pipenv lock [OPTIONS]
+
+Options:
+  --three / --two     Use Python 3/2 when creating virtualenv.
+  --python TEXT       Specify which version of Python virtualenv should
+                      use.
+  -v, --verbose       Verbose mode.
+  -r, --requirements  Generate output compatible with requirements.txt.
+  -d, --dev           Generate output compatible with requirements.txt for
+                      the development dependencies.
+  --clear             Clear the dependency cache.
+  --pre               Allow pre–releases.
+  --keep-outdated     Keep out–dated dependencies from being updated in
+                      Pipfile.lock.
+  -h, --help          Show this message and exit.
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# ls
+Pipfile  Pipfile.lock  demo.ipynb
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# vim Pipfile
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv lock
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+Updated Pipfile.lock (5bedfe)!
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# code..
+code..: command not found
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# code.
+code.: command not found
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# code .
+Updating VS Code Server to version c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+Removing previous installation...
+Installing VS Code Server for x64 (c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5)
+Downloading: 100%
+Unpacking: 100%
+Unpacked 2370 files and folders to /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5.
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# python
+Python 3.8.10 (default, Mar 15 2022, 12:22:08)
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy
+>>>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>>
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# jupyter
+
+Command 'jupyter' not found, but can be installed with:
+
+apt install jupyter-core
+
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# pipenv install numpy scipy matplotlib ipython jupyter pandas sympy nose
+Installing numpy…
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Requirement already satisfied: numpy in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (1.22.4)
+
+Adding numpy to Pipfile's [packages]…
+Installing scipy…
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting scipy
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/cf/28/5ac0afe5fb473a934ef6bc7953a98a3d2eacf9a8f456524f035f3a844ca4/scipy-1.8.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (41.6 MB)
+Requirement already satisfied: numpy<1.25.0,>=1.17.3 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from scipy) (1.22.4)
+Installing collected packages: scipy
+Successfully installed scipy-1.8.1
+
+Adding scipy to Pipfile's [packages]…
+Installing matplotlib…
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting matplotlib
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/42/18/50a124008e624830fb8e2a5384802ba99ee0443994ebdee8f548c3732039/matplotlib-3.5.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (11.3 MB)
+Collecting cycler>=0.10
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/5c/f9/695d6bedebd747e5eb0fe8fad57b72fdf25411273a39791cde838d5a8f51/cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Collecting pyparsing>=2.2.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/6c/10/a7d0fa5baea8fe7b50f448ab742f26f52b80bfca85ac2be9d35cdd9a3246/pyparsing-3.0.9-py3-none-any.whl(98 kB)
+Collecting packaging>=20.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/05/8e/8de486cbd03baba4deef4142bd643a3e7bbe954a784dc1bb17142572d127/packaging-21.3-py3-none-any.whl (40 kB)
+Collecting pillow>=6.2.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a3/51/ea18862c6a1d8a34aeee643545b6b69bbaff67a1430360d2081833526504/Pillow-9.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+Collecting python-dateutil>=2.7
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Requirement already satisfied: numpy>=1.17 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from matplotlib) (1.22.4)
+Collecting kiwisolver>=1.0.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c1/1a/c7557d40fc0f94aa589fed98196dac67b030fda63e1b3ea2f269351cc409/kiwisolver-1.4.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.2 MB)
+Collecting fonttools>=4.22.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/2f/85/2f6e42fb4b537b9998835410578fb1973175b81691e9a82ab6668cf64b0b/fonttools-4.33.3-py3-none-any.whl (930 kB)
+Collecting six>=1.5
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: cycler, pyparsing, packaging, pillow, six, python-dateutil, kiwisolver, fonttools, matplotlib
+Successfully installed cycler-0.11.0 fonttools-4.33.3 kiwisolver-1.4.2 matplotlib-3.5.2 packaging-21.3 pillow-9.1.1 pyparsing-3.0.9 python-dateutil-2.8.2 six-1.16.0
+
+Adding matplotlib to Pipfile's [packages]…
+Installing ipython…
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting ipython
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/fe/10/0a5925e6e8e4c948b195b4c776cae0d9d7bc6382008a0f7ed2d293bf1cfb/ipython-8.4.0-py3-none-any.whl (750 kB)
+Collecting prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/3f/2d/dcb44d69f388ca2ee1a4a4d3c204ab66b36975c0d5166781eaeeff76b882/prompt_toolkit-3.0.29-py3-none-any.whl (381 kB)
+Collecting stack-data
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/6b/25/9a454b432df53ffbbb4f03198c3347f393c34f4de07fb652563bdbdf91e8/stack_data-0.2.0-py3-none-any.whl (21 kB)
+Collecting jedi>=0.16
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b3/0e/836f12ec50075161e365131f13f5758451645af75c2becf61c6351ecec39/jedi-0.18.1-py2.py3-none-any.whl(1.6 MB)
+Collecting traitlets>=5
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c1/b2/8ee381f21863d496c449ef79dd05962d6970b935ad78f8183381f07808a8/traitlets-5.2.2.post1-py3-none-any.whl (106 kB)
+Collecting pickleshare
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9a/41/220f49aaea88bc6fa6cba8d05ecf24676326156c23b991e80b3f2fc24c77/pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+Collecting pexpect>4.3; sys_platform != "win32"
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/39/7b/88dbb785881c28a102619d46423cb853b46dbccc70d3ac362d99773a78ce/pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+Collecting matplotlib-inline
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a6/2d/2230afd570c70074e80fd06857ba2bdc5f10c055bd9125665fe276fadb67/matplotlib_inline-0.1.3-py3-none-any.whl (8.2 kB)
+Collecting decorator
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/d5/50/83c593b07763e1161326b3b8c6686f0f4b0f24d5526546bee538c89837d6/decorator-5.1.1-py3-none-any.whl(9.1 kB)
+Collecting pygments>=2.4.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/5c/8e/1d9017950034297fffa336c72e693a5b51bbf85141b24a763882cf1977b5/Pygments-2.12.0-py3-none-any.whl(1.1 MB)
+Collecting backcall
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/4c/1c/ff6546b6c12603d8dd1070aa3c3d273ad4c07f5771689a7b69a550e8c951/backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: setuptools>=18.5 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipython) (44.0.0)
+Collecting wcwidth
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/59/7c/e39aca596badaf1b78e8f547c807b04dae603a433d3e7a7e04d67f2ef3e5/wcwidth-0.2.5-py2.py3-none-any.whl (30 kB)
+Collecting executing
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/61/d8/ad89910dc1da01a24135cb3dce702c72a8172f7b8f896ac0c4c34bcaf323/executing-0.8.3-py2.py3-none-any.whl (16 kB)
+Collecting pure-eval
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/2b/27/77f9d5684e6bce929f5cfe18d6cfbe5133013c06cb2fbf5933670e60761d/pure_eval-0.2.2-py3-none-any.whl(11 kB)
+Collecting asttokens
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/16/d5/b0ad240c22bba2f4591693b0ca43aae94fbd77fb1e2b107d54fff1462b6f/asttokens-2.0.5-py2.py3-none-any.whl (20 kB)
+Collecting parso<0.9.0,>=0.8.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/05/63/8011bd08a4111858f79d2b09aad86638490d62fbf881c44e434a6dfca87b/parso-0.8.3-py2.py3-none-any.whl(100 kB)
+Collecting ptyprocess>=0.5
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/22/a6/858897256d0deac81a172289110f31629fc4cee19b6f01283303e18c8db3/ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Requirement already satisfied: six in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from asttokens->stack-data->ipython) (1.16.0)
+Installing collected packages: wcwidth, prompt-toolkit, executing, pure-eval, asttokens, stack-data, parso, jedi, traitlets, pickleshare, ptyprocess, pexpect, matplotlib-inline, decorator, pygments, backcall, ipython
+Successfully installed asttokens-2.0.5 backcall-0.2.0 decorator-5.1.1 executing-0.8.3 ipython-8.4.0 jedi-0.18.1 matplotlib-inline-0.1.3 parso-0.8.3 pexpect-4.8.0 pickleshare-0.7.5 prompt-toolkit-3.0.29 ptyprocess-0.7.0 pure-eval-0.2.2 pygments-2.12.0 stack-data-0.2.0 traitlets-5.2.2.post1 wcwidth-0.2.5
+
+Adding ipython to Pipfile's [packages]…
+Installing jupyter…
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting jupyter
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/83/df/0f5dd132200728a86190397e1ea87cd76244e42d39ec5e88efd25b2abd7e/jupyter-1.0.0-py2.py3-none-any.whl (2.7 kB)
+Collecting ipywidgets
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/86/7d/06b48ec5fd605775c7e85b3ea397d8f0294f66d570bcee59496eb5195fc5/ipywidgets-7.7.0-py2.py3-none-any.whl (123 kB)
+Collecting notebook
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b5/62/229659241aee54be38990e06e684bcfe5c9c8727185f5e39335be8821583/notebook-6.4.12-py3-none-any.whl(9.9 MB)
+Collecting qtconsole
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/0a/d3/b11e72e7de3838e6cdabd64ed7cf8906950ce414d634831f45258d351d8a/qtconsole-5.3.1-py3-none-any.whl(120 kB)
+Collecting ipykernel
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/94/67/62839152dec4d1b4ea595fcd8f5c7cf178a3295be2a928c031225156e901/ipykernel-6.13.1-py3-none-any.whl (133 kB)
+Collecting jupyter-console
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/fc/e9/5d4e1e616f7d7a8a9d7f313ac14bf43d1ea33cae6859eeb761b8cac364c2/jupyter_console-6.4.3-py3-none-any.whl (22 kB)
+Collecting nbconvert
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e8/f9/2de57146b8995d7f1b68d6fd0b4751d68c23f52e6f4ad926a7274184e8f2/nbconvert-6.5.0-py3-none-any.whl(561 kB)
+Collecting widgetsnbextension~=3.6.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/4e/69/273f584c28805939c6cb45717638cb8edbd78147f02c564b8c7763e1872e/widgetsnbextension-3.6.0-py2.py3-none-any.whl (1.6 MB)
+Requirement already satisfied: ipython>=4.0.0; python_version >= "3.3" in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipywidgets->jupyter) (8.4.0)
+Collecting ipython-genutils~=0.2.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/fa/bc/9bd3b5c2b4774d5f33b2d544f1460be9df7df2fe42f352135381c347c69a/ipython_genutils-0.2.0-py2.py3-none-any.whl (26 kB)
+Collecting nbformat>=4.2.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/2f/9a/97151abb954af0cc5d0e3ff2eb7b6d96704a317ac2c0ce0cc76cef003991/nbformat-5.4.0-py3-none-any.whl (73 kB)
+Requirement already satisfied: traitlets>=4.3.1 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipywidgets->jupyter) (5.2.2.post1)
+Collecting jupyterlab-widgets>=1.0.0; python_version >= "3.6"
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/5f/2c/7331aa9c5041e8b107d712d853268e137f55014b858407816b5487289d11/jupyterlab_widgets-1.1.0-py3-none-any.whl (245 kB)
+Collecting jupyter-client>=5.3.4
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/d1/b7/04fa35716910061b996bbe7fbbeb02332c7597bfe5e68f76c57f3b702da9/jupyter_client-7.3.4-py3-none-any.whl (132 kB)
+Collecting Send2Trash>=1.8.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/47/26/3435896d757335ea53dce5abf8d658ca80757a7a06258451b358f10232be/Send2Trash-1.8.0-py3-none-any.whl (18 kB)
+Collecting jupyter-core>=4.6.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/34/7d/8e442c0637a648c0136f686e015dc2f547f1a19f2690b183aa340a6762bc/jupyter_core-4.10.0-py3-none-any.whl (87 kB)
+Collecting tornado>=6.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/7a/4a/4fafa6f032f9e202ce5bc1becacef5588a34fd0f0539fdcc705fa2b5ca4a/tornado-6.1-cp38-cp38-manylinux2010_x86_64.whl (427 kB)
+Collecting jinja2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting terminado>=0.8.3
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/85/be/6b89563289bc8df86f4089efcc4e28d39feaaa4c0863ddcb32dee18d0957/terminado-0.15.0-py3-none-any.whl (16 kB)
+Collecting prometheus-client
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/19/e5/7d4b4b3b0d8d2fdc55395cdb4271c6dbfde3c3ff7d6a6dbe63d19c4e2288/prometheus_client-0.14.1-py3-none-any.whl (59 kB)
+Collecting pyzmq>=17
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9e/5d/7554c32ba0eb42285e272a33be4b49560d1372824d1933351c963d3e25a1/pyzmq-23.1.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.1 MB)
+Collecting argon2-cffi
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a8/07/946d5a9431bae05a776a59746ec385fbb79b526738d25e4202d3e0bbf7f4/argon2_cffi-21.3.0-py3-none-any.whl (14 kB)
+Collecting nest-asyncio>=1.5
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/be/1e/a83058de46b40a392bdefcaac44d1d42db4bf8562cb68c95d6bae4b93276/nest_asyncio-1.5.5-py3-none-any.whl (5.2 kB)
+Requirement already satisfied: pygments in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from qtconsole->jupyter) (2.12.0)
+Collecting qtpy>=2.0.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/3e/66/141c5753d759864a051af23b86584ccf6338348efdfec3e52014aaf16531/QtPy-2.1.0-py3-none-any.whl (68 kB)
+Collecting psutil
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9d/41/d5f2db2ab7f5dff2fa795993a0cd6fa8a8f39ca197c3a86857875333ec10/psutil-5.9.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (284 kB)
+Collecting debugpy>=1.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/0e/21/eaac4b6ff2503e2ad86b3cdd7fe2875cbcd11af2b648eef8285346290196/debugpy-1.6.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.8 MB)
+Requirement already satisfied: matplotlib-inline>=0.1 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipykernel->jupyter) (0.1.3)
+Requirement already satisfied: packaging in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipykernel->jupyter) (21.3)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (fromjupyter-console->jupyter) (3.0.29)
+Collecting mistune<2,>=0.8.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/09/ec/4b43dae793655b7d8a25f76119624350b4d65eb663459eb9603d7f1f0345/mistune-0.8.4-py2.py3-none-any.whl (16 kB)
+Collecting pandocfilters>=1.4.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/5e/a8/878258cffd53202a6cc1903c226cf09e58ae3df6b09f8ddfa98033286637/pandocfilters-1.5.0-py2.py3-none-any.whl (8.7 kB)
+Collecting jupyterlab-pygments
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c0/7e/c3d1df3ae9b41686e664051daedbd70eea2e1d2bd9d9c33e7e1455bc9f96/jupyterlab_pygments-0.2.2-py2.py3-none-any.whl (21 kB)
+Collecting MarkupSafe>=2.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/fd/f4/524d2e8f5a3727cf309c2b7df7c732038375322df1376c9e9ef3aa92fcaf/MarkupSafe-2.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Collecting bleach
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/35/8b/bad37525e7ef0669f013059affb3bbcd9311a24d63eda96723339ee0aab7/bleach-5.0.0-py3-none-any.whl (160 kB)
+Collecting nbclient>=0.5.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/92/a4/90295d9ef814463d96a2c16f9eaef96e0a31ebf09df94c7011e8b18f9590/nbclient-0.6.4-py3-none-any.whl (71 kB)
+Collecting tinycss2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/53/7b/5dba39bf0572f1f28e2844f08f74a73482a381de1d1feac3bbc6b808051e/tinycss2-1.1.1-py3-none-any.whl (21 kB)
+Collecting defusedxml
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/07/6c/aa3f2f849e01cb6a001cd8554a88d4c77c5c1a31c95bdf1cf9301e6d9ef4/defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting beautifulsoup4
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9c/d8/909c4089dbe4ade9f9705f143c9f13f065049a9d5e7d34c828aefdd0a97c/beautifulsoup4-4.11.1-py3-none-any.whl (128 kB)
+Collecting entrypoints>=0.2.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/35/a8/365059bbcd4572cbc41de17fd5b682be5868b218c3c5479071865cab9078/entrypoints-0.4-py3-none-any.whl(5.3 kB)
+Requirement already satisfied: jedi>=0.16 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipython>=4.0.0; python_version >="3.3"->ipywidgets->jupyter) (0.18.1)
+Requirement already satisfied: pickleshare in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets->jupyter) (0.7.5)
+Requirement already satisfied: stack-data in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipython>=4.0.0; python_version >="3.3"->ipywidgets->jupyter) (0.2.0)
+Requirement already satisfied: setuptools>=18.5 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets->jupyter) (44.0.0)
+Requirement already satisfied: pexpect>4.3; sys_platform != "win32" in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets->jupyter) (4.8.0)
+Requirement already satisfied: decorator in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets->jupyter) (5.1.1)
+Requirement already satisfied: backcall in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from ipython>=4.0.0; python_version >= "3.3"->ipywidgets->jupyter) (0.2.0)
+Collecting fastjsonschema
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e6/0b/24795939622d60f4b453aa7040f23c6a6f8b44c7c026c3b42d9842e6cc31/fastjsonschema-2.15.3-py3-none-any.whl (22 kB)
+Collecting jsonschema>=2.6
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/aa/13/0063ea808b6a1bee57e0780d83bf0c57f0ed25a1b5ed3685524359c485fd/jsonschema-4.6.0-py3-none-any.whl (80 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from jupyter-client>=5.3.4->notebook->jupyter) (2.8.2)
+Requirement already satisfied: ptyprocess; os_name != "nt" in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from terminado>=0.8.3->notebook->jupyter) (0.7.0)
+Collecting argon2-cffi-bindings
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ec/f7/378254e6dd7ae6f31fe40c8649eea7d4832a42243acaf0f1fff9083b2bed/argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (86 kB)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from packaging->ipykernel->jupyter) (3.0.9)
+Requirement already satisfied: wcwidth in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->jupyter-console->jupyter) (0.2.5)
+Collecting webencodings
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: six>=1.9.0 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from bleach->nbconvert->jupyter) (1.16.0)
+Collecting soupsieve>1.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/16/e3/4ad79882b92617e3a4a0df1960d6bce08edfb637737ac5c3f3ba29022e25/soupsieve-2.3.2.post1-py3-none-any.whl (37 kB)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from jedi>=0.16->ipython>=4.0.0; python_version >= "3.3"->ipywidgets->jupyter) (0.8.3)
+Requirement already satisfied: asttokens in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from stack-data->ipython>=4.0.0; python_version >= "3.3"->ipywidgets->jupyter) (2.0.5)
+Requirement already satisfied: executing in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from stack-data->ipython>=4.0.0; python_version >= "3.3"->ipywidgets->jupyter) (0.8.3)
+Requirement already satisfied: pure-eval in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from stack-data->ipython>=4.0.0; python_version >= "3.3"->ipywidgets->jupyter) (0.2.2)
+Collecting attrs>=17.4.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/be/be/7abce643bfdf8ca01c48afa2ddf8308c2308b0c3b239a44e57d020afa0ef/attrs-21.4.0-py2.py3-none-any.whl (60 kB)
+Collecting importlib-resources>=1.4.0; python_version < "3.9"
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/bd/4d/19cb95029e824d878d5d13b62825839b5b024a62706ea308781a9e2cf534/importlib_resources-5.7.1-py3-none-any.whl (28 kB)
+Collecting pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/58/6e/d456cfc71009aef515206201474a115ec68ec20307e4909e60e182292e90/pyrsistent-0.18.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (119 kB)
+Collecting cffi>=1.0.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e5/fe/1dac7533ddb73767df8ba26183a9375dde2ee136aec7c92c9fb3038108e3/cffi-1.15.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (446 kB)
+Collecting zipp>=3.1.0; python_version < "3.10"
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/80/0e/16a7ee38617aab6a624e95948d314097cc2669edae9b02ded53309941cfc/zipp-3.8.0-py3-none-any.whl (5.4kB)
+Collecting pycparser
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Installing collected packages: entrypoints, pyzmq, nest-asyncio, tornado, jupyter-core, jupyter-client, Send2Trash, fastjsonschema, attrs, zipp, importlib-resources, pyrsistent, jsonschema, nbformat, MarkupSafe, jinja2, terminado, prometheus-client, pycparser, cffi, argon2-cffi-bindings, argon2-cffi, ipython-genutils, mistune, pandocfilters, jupyterlab-pygments, webencodings, bleach, nbclient, tinycss2, defusedxml, soupsieve, beautifulsoup4, nbconvert, psutil, debugpy, ipykernel, notebook, widgetsnbextension, jupyterlab-widgets, ipywidgets, qtpy, qtconsole, jupyter-console, jupyter
+Successfully installed MarkupSafe-2.1.1 Send2Trash-1.8.0 argon2-cffi-21.3.0 argon2-cffi-bindings-21.2.0 attrs-21.4.0 beautifulsoup4-4.11.1 bleach-5.0.0 cffi-1.15.0 debugpy-1.6.0 defusedxml-0.7.1 entrypoints-0.4 fastjsonschema-2.15.3 importlib-resources-5.7.1 ipykernel-6.13.1 ipython-genutils-0.2.0 ipywidgets-7.7.0 jinja2-3.1.2 jsonschema-4.6.0 jupyter-1.0.0 jupyter-client-7.3.4 jupyter-console-6.4.3 jupyter-core-4.10.0 jupyterlab-pygments-0.2.2 jupyterlab-widgets-1.1.0 mistune-0.8.4 nbclient-0.6.4 nbconvert-6.5.0 nbformat-5.4.0 nest-asyncio-1.5.5 notebook-6.4.12 pandocfilters-1.5.0 prometheus-client-0.14.1 psutil-5.9.1 pycparser-2.21 pyrsistent-0.18.1 pyzmq-23.1.0 qtconsole-5.3.1 qtpy-2.1.0 soupsieve-2.3.2.post1 terminado-0.15.0 tinycss2-1.1.1 tornado-6.1 webencodings-0.5.1widgetsnbextension-3.6.0 zipp-3.8.0
+
+Adding jupyter to Pipfile's [packages]…
+Installing pandas…
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting pandas
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/12/07/e82b5defa695f09dd0ab1aecda886eb1c1aa6807c34ac3a0d691dc64503c/pandas-1.4.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.7 MB)
+Collecting pytz>=2020.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/60/2e/dec1cc18c51b8df33c7c4d0a321b084cf38e1733b98f9d15018880fb4970/pytz-2022.1-py2.py3-none-any.whl(503 kB)
+Requirement already satisfied: python-dateutil>=2.8.1 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: numpy>=1.18.5; platform_machine != "aarch64" and platform_machine != "arm64" and python_version < "3.10" in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from pandas) (1.22.4)
+Requirement already satisfied: six>=1.5 in /root/.local/share/virtualenvs/foo-QuVju7sM/lib/python3.8/site-packages (from python-dateutil>=2.8.1->pandas) (1.16.0)
+Installing collected packages: pytz, pandas
+Successfully installed pandas-1.4.2 pytz-2022.1
+
+Adding pandas to Pipfile's [packages]…
+Installing sympy…
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting sympy
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/d0/04/66be21ceb305c66a4b326b0ae44cc4f027a43bc08cac204b48fb45bb3653/sympy-1.10.1-py3-none-any.whl (6.4 MB)
+Collecting mpmath>=0.19
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/d4/cf/3965bddbb4f1a61c49aacae0e78fd1fe36b5dc36c797b31f30cf07dcbbb7/mpmath-1.2.1-py3-none-any.whl (532 kB)
+Installing collected packages: mpmath, sympy
+Successfully installed mpmath-1.2.1 sympy-1.10.1
+
+Adding sympy to Pipfile's [packages]…
+Installing nose…
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting nose
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/15/d8/dd071918c040f50fa1cf80da16423af51ff8ce4a0f2399b7bf8de45ac3d9/nose-1.3.7-py3-none-any.whl (154kB)
+Installing collected packages: nose
+Successfully installed nose-1.3.7
+
+Adding nose to Pipfile's [packages]…
+Pipfile.lock (5bedfe) out of date, updating to (54a5d7)…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+Updated Pipfile.lock (54a5d7)!
+Installing dependencies from Pipfile.lock (54a5d7)…
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 78/78 — 00:00:58
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# code .
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# jupyter
+usage: jupyter [-h] [--version] [--config-dir] [--data-dir] [--runtime-dir]
+               [--paths] [--json] [--debug]
+               [subcommand]
+
+Jupyter: Interactive Computing
+
+positional arguments:
+  subcommand     the subcommand to launch
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --version      show the versions of core jupyter packages and exit
+  --config-dir   show Jupyter config dir
+  --data-dir     show Jupyter data dir
+  --runtime-dir  show Jupyter runtime dir
+  --paths        show all Jupyter paths. Add --json for machine-readable
+                 format.
+  --json         output paths as machine-readable json
+  --debug        output debug information about paths
+
+Available subcommands: bundlerextension console dejavu execute kernel
+kernelspec migrate nbconvert nbextension notebook qtconsole run
+serverextension troubleshoot trust
+
+Please specify a subcommand or one of the optional arguments.
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# git clone https://github.com/wangqia2000/algorithmshop.git
+Cloning into 'algorithmshop'...
+fatal: unable to access 'https://github.com/wangqia2000/algorithmshop.git/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/foo# cd ..
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# git@github.com:wangqia2000/algorithmshop.git
+bash: git@github.com:wangqia2000/algorithmshop.git: No such file or directory
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# git clone git@github.com:wangqia2000/algorithmshop.git
+Cloning into 'algorithmshop'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# git clone http://github.com/wangqia2000/algorithmshop.git
+Cloning into 'algorithmshop'...
+fatal: unable to access 'http://github.com/wangqia2000/algorithmshop.git/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# git clone --recursive  http://github.com/wangqia2000/algorithmshop.git
+Cloning into 'algorithmshop'...
+warning: redirecting to https://github.com/wangqia2000/algorithmshop.git/
+remote: Enumerating objects: 218, done.
+remote: Counting objects: 100% (218/218), done.
+remote: Compressing objects: 100% (124/124), done.
+remote: Total 218 (delta 88), reused 218 (delta 88), pack-reused 0
+Receiving objects: 100% (218/218), 4.32 MiB | 2.93 MiB/s, done.
+Resolving deltas: 100% (88/88), done.
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# ls
+CLI-DEMO     algorithmshop  demo                      foo       jeno-test    kdd20-mosso.zip  numpy  test
+GSCIS_TBUDS  bar            facebook_combined.txt.gz  hexotest  kdd20-mosso  mosso-py         nvm
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# cd
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:~# cd /mnt/d/dev/algorithmshop/
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/algorithmshop# code .
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev/algorithmshop# cd ..
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# command>file.txt 2>&1
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# ls
+CLI-DEMO     algorithmshop  demo                      file.txt  hexotest   kdd20-mosso      mosso-py  nvm
+GSCIS_TBUDS  bar            facebook_combined.txt.gz  foo       jeno-test  kdd20-mosso.zip  numpy     test
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# vim file.txt
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# command >file.txt 2>&1
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# command >file.txt
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# command >> file.txt
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# ls |tee test.txt
+CLI-DEMO
+GSCIS_TBUDS
+algorithmshop
+bar
+demo
+facebook_combined.txt.gz
+file.txt
+foo
+hexotest
+jeno-test
+kdd20-mosso
+kdd20-mosso.zip
+mosso-py
+numpy
+nvm
+test
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev# ls | tee test.txt
+CLI-DEMO
+GSCIS_TBUDS
+algorithmshop
+bar
+demo
+facebook_combined.txt.gz
+file.txt
+foo
+hexotest
+jeno-test
+kdd20-mosso
+kdd20-mosso.zip
+mosso-py
+numpy
+nvm
+test
+test.txt
+(foo-QuVju7sM) root@DESKTOP-44BC9SM:/mnt/d/dev#
